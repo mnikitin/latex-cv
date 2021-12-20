@@ -32,9 +32,9 @@
 \usepackage{import}
 
 % personal data
-\name{FirstName}{LastName}
+\name{Mikhail}{Nikitin}
 % \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{500 College Ave, Swarthmore, PA 19081 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 % \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
 % \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
@@ -104,73 +104,106 @@
 \vspace*{-23mm}
 
 \begin{center}
-\begin{tabular}{ c c c c }
- \faGlobe\enspace mysite.me & \faEnvelopeO\enspace xxxx@swarthmore.edu & \faGithub\enspace yourgithub & \faMobile\enspace 123-456-7891\\  
+\begin{tabular}{ c c c }
+ \faEnvelopeO\enspace mikhail.nikitin92@gmail.com & \faGithub\enspace \href{https://github.com/mnikitin}{mnikitin} & \faMobile\enspace +79653804518\\  
 \end{tabular}
 \end{center}
 
 \section{EDUCATION}
-{\customcventry{Expected Graduation: June 2018}{BA in Computer Science GPA: 1.0/4.0}{Swarthmore College}{Swarthmore, PA}{}{}}
+{\customcventry{2009 - 2014}{Computational Mathematics and Cybernetics Department}{Specialist Degree}{Moscow State University}{}{Graphics \& Media Lab, Computer Vision Group}}
+{\customcventry{Expected Graduation: 2022}{Computational Mathematics and Cybernetics Department}{PhD Degree}{Moscow State University}{}{Graphics \& Media Lab, Computer Vision Group}}
 
 \section{EXPERIENCE}
 
-{\customcventry{Sept 2017 - Dec 2017}{Software Engineer Intern}{Amazing Company 1}{San Francisco, CA}{}
+{\customcventry{July 2012 - Sept 2013}{Junior Computer Vision Researcher}{Video Analysis Technologies (Tevian)}{Moscow, part-time}{}
 {\begin{itemize}
-  \item Integrated calendar invitations into Mailbox, allowing RSVP responses without leaving the app
+  \item Face Recognition and Face Features Detection based on hand-crafted features
 \end{itemize}
 }
 
-{\customcventry{June 2017 – Aug 2017}{Software Engineer Intern}{Amazing Company 2}{San Francisco, CA}{}
+{\customcventry{Oct 2013 – Dec 2014}{Software Developer and Researcher}{Video Analysis Technologies (Tevian)}{Moscow}{}
 {\begin{itemize}
-  \item Analyzed the best implementation for the calendar system, researching relevant APIs and RFCs
-that would create a practical integration. Included extensive testing among existing providers
-  \item Worked full-stack across Mailbox systems, from the iOS app in Objective-C/C++11 to several backend systems in Node.js/CoffeeScript. Required quickly picking up different environments
-  \item Constructed a load testing framework in Scala using Gatling to generate dummy ad impression data for testing a MapReduce pipeline
+  \item Face Recognition, Face Features Detection and Face Quality Assessment based on hand-crafted features
+  \item Data annotation management
+  \item Implemented some investigated algorithms in C++ for integration into the Tevian FaceSDK
+  \item Developed multithreaded facial analysis system for one of the customers
 \end{itemize}
 }
 
-{\customcventry{Jan 2016 – June 2016}{Backend Engineer}{Amazing Company 3}{Remote}{}
+{\customcventry{Jan 2015 – Dec 2018}{Computer Vision Researcher}{Video Analysis Technologies (Tevian)}{Moscow}{}
 {\begin{itemize}
-  \item Developed an ETL pipeline to aggregate data from Hadoop HDFS using Apache Spark and Cloudera Impala, resulting in a \textasciitilde5x speed improvement over the existing Pig/Hive/Oozie pipeline
-  \item Reworked a reporting system to work on-demand using Amazon Redshift, resulting in a 1 hour decrease in total overnight ETL job duration
-  \item Migrated push notifications to AWS SNS, saving 98\% in push-related costs
-\end{itemize}
-}
-
-\section{PROJECTS}
-
-{\customcvproject{Amazing Project 1}{Aug 2017 - Present}
-  {\begin{itemize}
-    \item Ran custom Minecraft mods on CentOS and Debian servers
-    \item Reverse engineered obfuscated Java using a decompiler and reflection
+  \item Developed new or improved existed algorithms in Tevian FaceSDK:
+  \begin{itemize}
+  	\item Face Recognition (continuous improvement)
+  	\item Face Quality Assessment (simple face rotation classifiers and brand new training method for overall FQA)
+  	\item Anti-spoofing (using synthetic data created one of the first deep learning based algorithms in the world)
+  	\item Face detector false positives filter
   \end{itemize}
-  }
-}
-
-{\customcvproject{Amazing Project 2}{Feb 2016 – May 2017}
-{\begin{itemize}
-  \item Began a group to create the first 36 hour student-run hackathon ever held at Illinois
-  \item Led 50 staff to raise \$175,000 for HackIllinois, managing relationships with 60+ sponsors
-  \item Plan events to increase social interaction among ACM members, as well as events to foster the spirit of computer science at Illinois
+  \item Developed several vehicle classifiers for analysis of data from traffic monitoring cameras
+  \item Created some auxiliary algorithms for automatic store's shelves fullness analysis
+  \item As scientific supervisor worked on the following projects:
+  \begin{itemize}
+  	\item Person re-identification
+  	\item TV broadcast analysis
+  \end{itemize}
 \end{itemize}
 }
 
-{\customcvproject{Amazing Project 3}{Jan 2015 – May 2015}
+{\customcventry{Jan 2019 – Now}{Lead Computer Vision Researcher}{Video Analysis Technologies (Tevian)}{Moscow}{}
 {\begin{itemize}
-  \item Assist in recruiting potential and admitted students to the UIUC computer science program
-  \item Attend information sessions, admitted student Q\&A’s, and student lunches to generate interest in the Illinois Computer Science department
+  \item Lead team of researches who work on further improvemenet of Tevian FaceSDK
+  \item Team research projects:
+  \begin{itemize}
+  	\item Face anti-spoofing (RGB and depth based algorithms)
+  	\item Facial attributes classification (eyewear, headwear, facial hair, hair type, hair color)
+  	\item Face-based demography analysis (gender, age, ethnicity)
+  	\item Face Quality Assessment (fr-based overall quality estimator)
+  	\item Face Recognition:
+  	\begin{itemize}
+  		\item general improvement using new architecture blocks and training methods
+  		\item domain-specific improvements (medical masks, demography biases, high FPR with low quality faces)
+  		\item data refinement (test datasets and large-scale training dataset)
+  		\item face images clustering
+  		\item speeding up facial features extraction and matching 
+  	\end{itemize}
+  \end{itemize}
 \end{itemize}
 }
-}
+
+%\section{PROJECTS}
+%
+%{\customcvproject{Amazing Project 1}{Aug 2017 - Present}
+%  {\begin{itemize}
+%    \item Ran custom Minecraft mods on CentOS and Debian servers
+%    \item Reverse engineered obfuscated Java using a decompiler and reflection
+%  \end{itemize}
+%  }
+%}
+%
+%{\customcvproject{Amazing Project 2}{Feb 2016 – May 2017}
+%{\begin{itemize}
+%  \item Began a group to create the first 36 hour student-run hackathon ever held at Illinois
+%  \item Led 50 staff to raise \$175,000 for HackIllinois, managing relationships with 60+ sponsors
+%  \item Plan events to increase social interaction among ACM members, as well as events to foster the spirit of computer science at Illinois
+%\end{itemize}
+%}
+
+%{\customcvproject{Amazing Project 3}{Jan 2015 – May 2015}
+%{\begin{itemize}
+%  \item Assist in recruiting potential and admitted students to the UIUC computer science program
+%  \item Attend information sessions, admitted student Q\&A’s, and student lunches to generate interest in the Illinois Computer Science department
+%\end{itemize}
+%}
+%}
 
 \section{ADDITIONAL}
 \begin{minipage}{\maincolumnwidth}%
 	\small{
     	\begin{itemize}
-          \item Relevant Coursework: Data Structures and Algorithms, Natural Language Processing, Computer Systems, Databases, Computer Security, Abstract Algebra
-          \item President of XYZ Club, Public Relations Manager of Swarthmore QWE Club
-          \item Programming Languages: Python, C, C++, PHP, Java, HTML/CSS, Javascript, jQuery, NodeJS
-          \item Fluent in Gibberish, conversational in Nonsense
+    	  \item For several years was the only researcher in company who worked on the face recognition algorithm
+    	  \item Tevian's FR engine is used in many real-life projects across the world, and its high quality additionally confirmed by the NIST FRVT (3rd among Russian vendors)
+    	  \item In 2015 won olympiad on computer vision organized by VisionLabs. As a reward, did short-term internship at INRIA Paris where worked on video face recognition under supervision of Ivan Laptev
+    	  \item As PhD student, taught programming courses at the university, and was an unofficial scientific supervisor for several Lab students
 		\end{itemize}}%
 \end{minipage}%
       
@@ -178,9 +211,17 @@ that would create a practical integration. Included extensive testing among exis
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\renewcommand{\refname}{PUBLICATIONS}
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\begin{itemize}
+	\item Nikitin M. et al. \textit{Face quality assessment for face verification in video.} In GraphiCon'2014
+	\item Nikitin M. et al. \textit{Neural network model for video-based face recognition with frames quality assessment}. In Computer Optics 41 (5), 2017
+	\item Nikitin M. et al. \textit{Face anti-spoofing with joint spoofing medium detection and eye blinking analysis}. In Computer Optics 43 (4), 2019
+	\item Nikitin M. et al. \textit{Pairwise Ranking Distillation for Deep Face Recognition}. In GraphiCon'2020
+\end{itemize}
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
